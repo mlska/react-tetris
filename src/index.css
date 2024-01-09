@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  --corner-radius: 1rem;
+}
+
+h1 {
+  text-align: center;
+  margin: 0.5rem auto;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  width: 50%;
+  margin: auto;
+  gap: 2rem;
+}
+
+.nextBlock {
+  grid-column: 2;
+  grid-row: 1;
+  border: 1px solid black;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  border-radius: var(--corner-radius);
+}
+
+.score {
+  grid-column: 2;
+  grid-row: 2;
+  border: 1px solid black;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  border-radius: var(--corner-radius);
+}
+
+.score > div {
+  font-weight: bold;
+  font-size: 48px;
+}
+
+.controls {
+  grid-column: 2;
+  grid-row: 3;
+  border: 1px solid black;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  border-radius: var(--corner-radius);
+}
+
+.controls button {
+  width: 100%;
+  padding: 12px 0;
+  border: 1px solid black;
+}
+
+.controls button:hover:not(.disabled) {
+  cursor: pointer;
+  opacity: 0.8;
+  transition: 300ms;
+}
+
+.startBtn {
+  color: white;
+  background-color: rgb(0, 95, 235);
+}
+
+.stopBtn {
+  color: white;
+  background-color: red;
+}
+
+.resumeBtn {
+  background-color: rgb(15, 148, 15);
+}
+
+.pauseBtn {
+  background-color: yellow;
+}
+
+.controls button.disabled {
+  cursor: not-allowed;
+}
+
+.board {
+  grid-column: 1;
+  grid-row: 1 / 4;
+  border: 2px solid black;
+  user-select: none;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+}
+
+.cell {
+  width: 30px;
+  height: 30px;
+  border: 1px solid black;
+}
+
+.cell.hidden {
+  border: 0;
+}
+
+.cell.Empty {
+  background-color: #ddd;
+}
+
+.cell.I {
+  background-color: rgb(236, 28, 37);
+}
+
+.cell.J {
+  background-color: rgb(236, 1, 139);
+}
+
+.cell.L {
+  background-color: rgb(255, 241, 15);
+}
+
+.cell.O {
+  background-color: rgb(0, 173, 238);
+}
+
+.cell.S {
+  background-color: rgb(26, 116, 187);
+}
+
+.cell.T {
+  background-color: rgb(100, 100, 100);
+}
+
+.cell.Z {
+  background-color: rgb(139, 197, 65);
+}
